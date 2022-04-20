@@ -3,7 +3,7 @@ lazy val root = (project in file(".")).
   settings(
     inThisBuild(List(
     //   organization := "ch.epfl.scala",
-      scalaVersion := "2.11.12"
+      scalaVersion := "3.0.2" //Daniel Ciocîrlan chose scala 3
     )),
     name := "udemy-scala-beginners"
   )
