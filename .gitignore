@@ -1,2 +1,7 @@
 *.class
 *.log
+
+# VScode stuff
+.bloop
+.metals
+.vscode
