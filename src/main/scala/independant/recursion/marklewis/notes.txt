@@ -1,0 +1,49 @@
+
+Basic concept source:
+https://www.youtube.com/watch?v=qeh2bbPqKaI&t=75s
+
+Using factorial as an example:
+
+The basic way of representing a factorial of n:
+    
+    n! = 1 * 2 * 3 * ... * n
+
+This can be great for abstracting out the relationship idea, but there are more advanced ways to go about this:
+
+         n
+    n! = Πi
+        i=1
+
+Like using sumation notation, this notation represents repeated multiplication, still there is another way:
+
+Recursive mathematical notation in of factorial:
+
+            1               if n < 2    (base case)
+         /
+    n! = 
+         \
+            n * (n - 1)!     otherwise
+
+The base case is critical for the recursive function to terminate its loop
+
+Another example:
+
+    f(n) = 1 + 4 + 9 + 16 + ... + n^2
+
+    also represented as
+
+           n
+    f(n) = Σi^2
+           i=1
+
+    recursively represented as
+
+              1                 if n > 2
+            /
+    f(n) =
+            \
+              n^2 + f(n - 1)    otherwise
+
+
+As recursion the function calls itself, the condition of n gets closer and closer to the base case.
+once the value of n reaches the base case the function terminates
