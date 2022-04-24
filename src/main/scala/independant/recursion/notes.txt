@@ -8,32 +8,35 @@ Recursion is all about taking a problem and using simpler versions of the proble
 
 Steps to take/Questions to ask:
 
-1. What's the simplest possible input?
-    - the simplest possible input becomes a base case for a recurive problem
-        *A base case of a recursive function is the only case where we provide an explicit answer. 
-            All other solutions to the problem will build on the base case.
+    1. What's the simplest possible input?
+        - the simplest possible input becomes a base case for a recurive problem
+            *A base case of a recursive function is the only case where we provide an explicit answer. 
+                All other solutions to the problem will build on the base case.
 
-2. Play around with examples and visualize!
-    - this step involves trying out examples and visualizing how the inputs and outputs of these functions interact
+    2. Play around with examples and visualize!
+        - this step involves trying out examples and visualizing how the inputs and outputs of these functions interact
 
 
-3. Relate hard cases to simpler cases
-    - or from step 2's context: relating larger examples to smaller examples
+    3. Relate hard cases to simpler cases
+        - or from step 2's context: relating larger examples to smaller examples
 
-4. Generalize the pattern
-    - you can Generalize a pattern by looking for the value that comes before it
-    - eg. sum(k - 1), you need only to add k to find sum(k)
-        - or sum(k) = sum(k - 1) + k
-    ** this is the basis for recurive pattern
+    4. Generalize the pattern
+        - you can Generalize a pattern by looking for the value that comes before it
+        - eg. sum(k - 1), you need only to add k to find sum(k)
+            - or sum(k) = sum(k - 1) + k
+        ** this is the basis for recurive pattern
 
-5. Write code by combining recurive pattern with the base case
-    - take the generalization from step 4 and the relation of the prior steps to create a programmatic function to model this pattern
+    5. Write code by combining recurive pattern with the base case
+        - take the generalization from step 4 and the relation of the prior steps to create a programmatic function to model this pattern
 
-    def sum(n):
-        if n == 0:
-            return 0                    # this defines the base case
-        else:
-            return n + sum(n - 1)       # this defines all other solutions
+        def sum(n):
+            if n == 0:
+                return 0                    # this defines the base case
+            else:
+                return n + sum(n - 1)       # this defines all other solutions
+
+Recursive Leap of Faith
+- Assume simpler cases work out
 
 ~ Example problems ~
 
@@ -209,3 +212,107 @@ Using the 5 step method of recursion:
         |     \
        end    15
 
+        Recursive leap of faith
+        - if we want to find sum(5) assume that sum(4) will work.
+            - if we add 5 to sum(4), then sum(n = 5) will work
+
+Example problem 2:
+
+Write a function that takes two inputs n and m and outputs the number of unique paths from the top
+left corner to the bottom right corner of an n x m grid.
+
+Constraints: you can only move down or right 1 unit at a time.
+
+function = grid_paths(n, m)
+
+Using the 5 step method:
+    1. What's the simplest possible input?
+        - 1 by 1 grid where we end up with exactly one path
+            - this can be achived by fixing the value of either n or m to 1
+
+        example:
+        grid_paths(1, 1) -> 1
+        grid_paths(2, 1) -> 1
+        grid_paths(1, 2) -> 1
+        grid_paths(1, m) -> 1
+        grid_paths(n, 1) -> 1
+
+        This can be simplified into the following base case:
+
+        grid_paths(n, m) -> 1 if n = 1 or m = 1
+        
+
+    2. Play around with examples and visualize!
+        - This was purely visual and its better to watch it https://www.youtube.com/watch?v=ngCos392W4w&t=480s
+
+    3. Relate hard cases to simpler cases
+        - This was purely visual and its better to watch it https://www.youtube.com/watch?v=ngCos392W4w&t=480s
+
+    4. Generalize the pattern
+        - we can generalize this pattern by taking the n x m grid and finding the truncated versions for each variable or axis
+            so the recursive function looks like grid_paths(n, m - 1) and grid_paths(n - 1, m)
+            explaination: https://www.youtube.com/watch?v=ngCos392W4w&t=620s
+
+    5. Write code by combining recurive pattern with the base case
+
+                            1 if n = 1 or m = 1
+                           /  
+        grid_paths(n, m) = 
+                           \
+                            grid_paths(n, m - 1) + grid_paths(n - 1, m)
+
+        def grid_paths(n, m):
+            if n == 1 or m == 1:
+                return 1
+            else:
+                return grid_paths(n, m - 1) + grid_paths(n - 1, m)
+
+Example problem 3:
+
+Write a function that counts the number of ways you can partition n objects using parts up to m (assuming m >= 0)
+
+function = count_partitions(n, m)
+
+1. What's the simplest possible input?
+    - when n = 0 and m = 0, or count_partitions(0, 0)
+    - so count_partitions(0, 0) -> 1 partitiion
+    - this is because there is still a partitiion but it is to include 0 parts
+
+    there is also only 1 partion whenever either n = 0
+    count_partitions(0, 1) -> 1
+    count_partitions(0, 2) -> 1
+    count_partitions(0, 3) -> 1
+
+    However, if m = 0, there are 0 partitions.
+    - this is because in the problem m dictates the number of partitions.
+
+    so there are two base cases:
+    count_partitions(n, m) -> 1 if n = 0
+    count_partitions(n, m) -> 0 if m = 0
+
+2. Play around with examples and visualize!
+    https://www.youtube.com/watch?v=ngCos392W4w&t=822s
+
+3. Relate hard cases to simpler cases
+    - from the video variable m is dictating factor of relationship. 
+    we can assume then that count_partitions(n, m) have elements from count_partitions(n, m - 1) in it
+    https://www.youtube.com/watch?v=ngCos392W4w&t=971s
+
+4. Generalize the pattern
+    https://www.youtube.com/watch?v=ngCos392W4w&t=1124s
+
+                              1 if n = 0; 0 if m = 0 or n < 0
+                            /
+    count_partitions(n, m) = 
+                            \
+                              count_partitions(n - m, m) + count_partitions(n, m - 1)
+
+5. Write code by combining recurive pattern with the base case
+
+    def count_partitions(n, m):
+        if n == 0:
+            return 1
+        elif m == 0 or n < 0:
+            return 0
+        else:
+            return count_partitions(n - m, m) + count_partitions(n, m - 1)
