@@ -1,3 +1,4 @@
+# related to Scala recursion in Python is similar so seeing these examples in this language may help
 
 # Example 1:
 def sum_of_n(n):
