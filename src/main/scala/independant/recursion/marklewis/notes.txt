@@ -47,3 +47,97 @@ Another example:
 
 As recursion the function calls itself, the condition of n gets closer and closer to the base case.
 once the value of n reaches the base case the function terminates
+
+~~~ Tracing Recursive Functions ~~~
+
+source:
+https://www.youtube.com/watch?v=3xO1F2Jj5kg&t=77s
+
+Tracing is the process of going thru a program one line at a time to to find out what it is doing
+
+Different from sequential execution where the program executes top-to-bottom
+
+Using the factorial function as an example:
+
+def factorial(n: Int): Int = { 
+    if (n < 2) 1
+    else n * factorial(n - 1)
+}
+
+What happens in the function is that the compiler evaluates n. If n is less than 2 then the function returns 1, 
+otherwise if n is greater then 2, then it returns the value of n times the factorial function, but with value n - 1.
+
+for factorial of 5:
+
+frame 1:
+    factorial(5)
+    5 IS NOT less than 2
+    so return 5 * factorial(4)
+
+frame 2:
+    factorial(4)
+    4 IS NOT less than 2
+    so return 4 * factorial(3)
+
+frame 3:
+    factorial(3)
+    3 IS NOT less than 2
+    so return 3 * factorial(2)
+
+frame 4:
+    factorial(2)
+    2 IS NOT less than 2
+    so return 2 * factorial(1)
+
+frame 5:
+    factorial(1)
+    1 IS less than 2
+    so return 1
+
+At frame 5 the base case is reached, but the program still hasn't solved the 5 * factorial(5 - 1), yet.
+But because the base case has been reached, the program can now work its way back up to solve for the original expression in frame 1.
+In the following frames the expression from the previous factorial will be highlighted by brackets for readability.
+
+frame 6:
+    factorial(1)
+    1
+
+frame 7:
+    factorial(2)
+    2 * factorial(1)
+    2 * [1]
+
+frame 8:
+    factorial(3)
+    3 * factorial(2)
+    3 * [2 * 1]
+
+frame 9:
+    factorial(4)
+    4 * factorial(3)
+    4 * [3 * 2 * 1]
+
+frame 10:
+    factorial(5)
+    5 * factorial(4)
+    5 * [4 * 3 * 2 * 1]
+
+Now with factorial(4 evaluated), the function is now ready to solve.
+
+the output will is [120]
+
+This recursive pattern can be illustrated below:
+
+    start  factorial(5)
+    |     /
+    |    /
+    |   /
+    |  /
+    | /
+    |factorial(1) = 1
+    | \
+    |  \
+    |   \
+    |    \
+    |     \
+    end    120
