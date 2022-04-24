@@ -195,16 +195,17 @@ Using the 5 step method of recursion:
         The function breaks down sum(n) until it reaches the base case,
         then builds back up by solving, starting from sum(0)
       
-      start
+      start  sum(5)
         |     /
         |    /
         |   /
         |  /
         | /
+        |sum(0)
         | \
         |  \
         |   \
         |    \
         |     \
-       end
+       end    15
 
