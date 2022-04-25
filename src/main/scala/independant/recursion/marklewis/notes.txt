@@ -141,3 +141,59 @@ This recursive pattern can be illustrated below:
     |    \
     |     \
     end    120
+
+Another way of looking at this problem is through pure substitution. Similar to looking at the function frame-by-frame, 
+this perspective also deconstructs the function's logic:
+
+/!\ note substitution best works when you are working with numerical values and not Units
+
+source:
+https://www.youtube.com/watch?v=sl4H7PhUSWk
+
+def factorial(n: Int): Int = if (n < 2) 1 else n * factorial(n - 1)
+
+
+factorial(5)
+Int = if (5 < 2) 1 else 5 * factorial(5 - 1)
+
+5 * factorial(4)
+5 * (if (4 < 2) 1 else 4 * factorial(4 - 1))
+
+5 * (4 * factorial(3))
+5 * 4 * (if (3 < 2) 1 else 3 * factorial(3 - 1))
+
+5 * 4 * (3 * factorial(2))
+5 * 4 * 3 * (if (2 < 2) 1 else 2 * factorial(2 - 1))
+
+5 * 4 * 3 * (2 * factorial(1))
+5 * 4 * 3 * 2 * ((1 < 2), so return 1)
+
+5 * 4 * 3 * 2 * 1
+120
+
+
+~ Sum of squares example ~
+
+def sumSquares(n: Int): Int = if(n < 2) 1 else n * n + sumSquares(n - 1)
+
+- or -
+
+def sumSquares(n: Int): Int = {
+    if(n < 2) 1 
+    else n * n + sumSquares(n - 1)
+}
+
+sumSquares(4)
+if(4 < 2) 1 else 4 * 4 + sumSquares(4 - 1)
+
+16 + sumSquares(3)
+16 + (if(3 < 2) 1 else 3 * 3 + sumSquares(3 - 1))
+
+16 + 9 + sumSquares(2)
+16 + 9 + (if(2 < 2) 1 else 2 * 2 + sumSquares(2 - 1))
+
+16 + 3 + 4 + sumSquares(1)
+16 + 9 + 4 + ((1 < 2), so return 1)
+
+16 + 9 + 4 + 1
+30

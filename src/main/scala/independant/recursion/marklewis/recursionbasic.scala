@@ -9,6 +9,12 @@ object RecursionBasic {
         else n * factorial(n - 1)
     }
 
+    // sum of squares example
+    def sumSquares(n: Int): Int = {
+        if(n < 2) 1
+        else n * n + sumSquares(n - 1)
+    }
+
     // build list example - made buildlist auxillary to keep main clean
     def example2() = {
         def buildlist(): List[String] = {
@@ -43,8 +49,11 @@ object RecursionBasic {
         println("Factorial example:")
         println(factorial(5))
 
-        println("Build list example:")
-        example2()
+        println("Sum of squares example:")
+        println(sumSquares(4))
+
+        // println("Build list example:")
+        // example2()
 
         println(s"\n ${"="*48} \n")
     }
