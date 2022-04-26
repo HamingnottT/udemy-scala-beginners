@@ -74,6 +74,8 @@ frame 1:
     5 IS NOT less than 2
     so return 5 * factorial(4)
 
+< NOTE: factorial(5) = 5 * factorial(4) has not been solved yet, so the function will iterate deeper into the recurive call until it reaches the base case >
+
 frame 2:
     factorial(4)
     4 IS NOT less than 2
@@ -123,6 +125,8 @@ frame 10:
     5 * [4 * 3 * 2 * 1]
 
 Now with factorial(4 evaluated), the function is now ready to solve.
+
+factorial(5) = 5 * 4 * 3 * 2 * 1
 
 the output will is [120]
 

@@ -1,0 +1,6 @@
+[0m[[0m[31merror[0m] [0m[0m[31m-- Error: E:\Users\Public\Programming\Project_Working\VSCode\Scala\practice\udemy-scala-beginners\src\main\scala\exercises\part1basics\recursion.scala:14:35 [0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m14 |[0m            [33melse[0m str + concatHelper(n - [31m1[0m, accumulator)[0m
+[0m[[0m[31merror[0m] [0m[0m   |                       [31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m   |               Cannot rewrite recursive call: it is not in tail position[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

@@ -77,7 +77,7 @@ ii. Mathematical
 
     This approach simply evaluates the sum of n by constructing a arithmetical model
 
-Using the 5 step method of recursion:
+iii. Using the 5 step method of recursion:
 
     1. What's the simplest possible input?
         sum(0) -> 0         # This is our base case
