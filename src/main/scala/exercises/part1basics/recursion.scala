@@ -31,6 +31,22 @@ object recursion {
          * optimized further, taking the accumulator in the main function and thus no longer needing an auxillary function to help the main.
         */
 
+    // 2) fibonacci tail recursion
+        // 1. My attempt
+    // def fiboTail(n: Int, accmulator: Int): Int =
+    //     if (n <= 2) accmulator
+    //     else fiboTail(n - 1, n + accmulator)
+
+    def fiboTail(n: Int): Int = {
+        @tailrec
+        def fiboHelper(n: Int, accmulator: Int): Int =
+            if (n <= 2) accmulator
+            else fiboHelper(n - 1, n + accmulator)
+
+        fiboHelper(n, 1)
+    }
+
+
     def main(args: Array[String]): Unit = {
         var inputStr = readLine("Input string: ")
         var inputInt = readLine("Input number: ").toInt
@@ -38,6 +54,8 @@ object recursion {
         println(stringConcat(inputStr, inputInt))
         println(concatenateTailrec(inputStr, inputInt, ""))
 
+
+        println(fiboTail(8))
     }
 
 }

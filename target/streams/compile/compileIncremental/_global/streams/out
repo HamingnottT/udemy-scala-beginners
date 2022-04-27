@@ -22,23 +22,14 @@
 [0m[[0m[0mdebug[0m] [0m[0mcompilation cycle 1[0m
 [0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to E:\Users\Public\Programming\Project_Working\VSCode\Scala\practice\udemy-scala-beginners\target\scala-3.0.2\classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mReturning already retrieved and compiled bridge: C:\Users\Jake NON-ADMIN\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala3-sbt-bridge\3.0.2\scala3-sbt-bridge-3.0.2.jar.[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 7234d7fc for Scala Compiler version 3.0.2[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 239e3a05 for Scala Compiler version 3.0.2[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	C:\Program Files\Java\jre1.8.0_311\lib\resources.jar;C:\Program Files\Java\jre1.8.0_311\lib\rt.jar;C:\Program Files\Java\jre1.8.0_311\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_311\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_311\lib\jce.jar;C:\Program Files\Java\jre1.8.0_311\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_311\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_311\classes;C:\Users\Jake NON-ADMIN\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala3-library_3\3.0.2\scala3-library_3-3.0.2.jar;C:\Users\Jake NON-ADMIN\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.6\scala-library-2.13.6.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	E:\Users\Public\Programming\Project_Working\VSCode\Scala\practice\udemy-scala-beginners\target\scala-3.0.2\classes[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.0767911 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.1477693 s[0m
 [0m[[0m[0mdebug[0m] [0m[0mdone compiling[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from exercises.part1basics.recursion...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: exercises.part1basics.recursion[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(exercises.part1basics.recursion)[0m
-[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(exercises.part1basics.recursion,ModifiedNames(changes = UsedName(concatenateTailrec,[Default]))) invalidates 1 classes due to The exercises.part1basics.recursion has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(concatenateTailrec,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(exercises.part1basics.recursion)[0m
-[0m[[0m[0mdebug[0m] [0m[0m  > [0m
-[0m[[0m[0mdebug[0m] [0m[0m  > [0m
-[0m[[0m[0mdebug[0m] [0m[0m        [0m
 [0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
 [0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: [0m
 [0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m

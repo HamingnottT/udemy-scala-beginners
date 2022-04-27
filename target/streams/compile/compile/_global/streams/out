@@ -1,6 +1,21 @@
-[0m[[0m[31merror[0m] [0m[0m[31m-- Error: E:\Users\Public\Programming\Project_Working\VSCode\Scala\practice\udemy-scala-beginners\src\main\scala\exercises\part1basics\recursion.scala:14:35 [0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m14 |[0m            [33melse[0m str + concatHelper(n - [31m1[0m, accumulator)[0m
-[0m[[0m[31merror[0m] [0m[0m   |                       [31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m   |               Cannot rewrite recursive call: it is not in tail position[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m[31m-- [E018] Syntax Error: E:\Users\Public\Programming\Project_Working\VSCode\Scala\practice\udemy-scala-beginners\src\main\scala\exercises\part1basics\recursion.scala:55:28 [0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m55 |[0m        println(fiboTail([31m5[0m, ))[0m
+[0m[[0m[31merror[0m] [0m[0m   |                            [31m^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m   |                            expression expected but [31m')'[0m found[0m
+[0m[[0m[31merror[0m] [0m[0m[31m-- [E007] Type Mismatch Error: E:\Users\Public\Programming\Project_Working\VSCode\Scala\practice\udemy-scala-beginners\src\main\scala\exercises\part1basics\recursion.scala:44:26 [0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m44 |[0m            [33melse[0m fiboTail(n - [31m1[0m, n + accmulator)[0m
+[0m[[0m[31merror[0m] [0m[0m   |                          [31m^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m   |                          Found:    (Int, Int)[0m
+[0m[[0m[31merror[0m] [0m[0m   |                          Required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m[31m-- [E007] Type Mismatch Error: E:\Users\Public\Programming\Project_Working\VSCode\Scala\practice\udemy-scala-beginners\src\main\scala\exercises\part1basics\recursion.scala:45:5 [0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m45 |[0m    }[0m
+[0m[[0m[31merror[0m] [0m[0m   |     [31m^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m   |     Found:    Unit[0m
+[0m[[0m[31merror[0m] [0m[0m   |     Required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m[31m-- [E007] Type Mismatch Error: E:\Users\Public\Programming\Project_Working\VSCode\Scala\practice\udemy-scala-beginners\src\main\scala\exercises\part1basics\recursion.scala:55:25 [0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m55 |[0m        println(fiboTail([31m5[0m, ))[0m
+[0m[[0m[31merror[0m] [0m[0m   |                         [31m^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m   |                         Found:    (Int, Null)[0m
+[0m[[0m[31merror[0m] [0m[0m   |                         Required: Int[0m
+[0m[[0m[31merror[0m] [0m[0mfour errors found[0m
+[0m[[0m[31merror[0m] [0m[0mfour errors found[0m
