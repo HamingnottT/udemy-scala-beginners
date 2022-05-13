@@ -1,0 +1,62 @@
+~~~ Arrays ~~~
+
+syntax of building an array:
+
+input:
+    val a = Array(7, 5, 9, 3, 2)
+
+output at repl console:
+    a: Array[Int] = Array(7, 5, 9, 3, 2)
+
+You can find the index of arrays by using this syntax:
+
+    arrayVariable(index)
+
+In this case, a(0) outputs 7 and a(1) outputs 5
+
+The contents of Arrays are mutable, meaning whats inside of them can change.
+We can reassign values by the following:
+
+    a(2) = 99
+
+This will return a: Array(7, 5, 99, 3, 2)
+
+On the other hand, the size of the array is immutable.
+so to add new values you would need to create a new array
+
+Arrays are great because they give us the mutablity of contents needed that otherwise can't be done in lists
+
+Some functions using arrays:
+
+    -- setting the values of an array --
+
+    using recursion:
+
+    def setArray(arr:Array[int], v:Int, i:Int): Unit = {
+        if(i < arr.length) {
+            arr[i] = v
+            setArray(arr, v, i + 1)
+        }
+    }
+
+    if we were to have:
+    val nums = Array(1, 1, 1, 1, 1)
+
+    calling:
+    fillArray(nums, 99, 0)
+    println(nums)
+
+    will result in:
+    Array(99, 99, 99, 99, 99)
+
+    -- operate on array --
+    
+    using recursion:
+
+    def operateOnArray(arr:Array[int], v:Int, f: (Int, Int) => Int): Int = {
+        if(i < arr.length-1) {
+            f(arr(i), operateOnArray(arr, i+1, f))
+        } else {
+            arr(i)
+        }
+    }
