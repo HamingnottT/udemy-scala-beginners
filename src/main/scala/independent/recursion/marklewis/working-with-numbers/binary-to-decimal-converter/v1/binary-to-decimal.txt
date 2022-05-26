@@ -1,0 +1,13 @@
+===================================
+Unused code
+===================================
+
+- trying to expand past 8-bit by partitioning the binary string
+// binString.toList.grouped(8)
+
+// for (bit <- binString) {
+        //     // newList += bit.toInt
+        //     print(bit)
+        // }
+
+        // binString.map(for (i <- binMultiples) i *)
